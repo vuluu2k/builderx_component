@@ -1,10 +1,11 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :style="style">{{ label }} </button>
+  <PButton type="primary" @click="onClick">{{ label }} </PButton>
 </template>
 
 <script lang="ts" setup>
 import './button.css';
 import { computed } from 'vue';
+import PButton from '@/components/PButton.vue';
 
 const props = withDefaults(defineProps<{
   /**
